@@ -1,4 +1,4 @@
-const isMobile = /mobile/i.test(window.navigator.userAgent);
+const isMobile = false; // /mobile/i.test(window.navigator.userAgent);
 
 const utils = {
     /**
