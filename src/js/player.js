@@ -351,7 +351,8 @@ class DPlayer {
                                 delete this.plugins.hls;
                             });
                         } else {
-                            this.notice('Error: Hls is not supported.');
+                            //this.notice('Error: Hls is not supported.');
+                            console.log('Error: Hls is not supported.');
                         }
                     } else {
                         this.notice("Error: Can't find Hls.");
