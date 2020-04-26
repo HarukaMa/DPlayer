@@ -280,6 +280,10 @@ class Controller {
         this.player.container.classList.add('dplayer-hide-controller');
         this.player.setting.hide();
         this.player.comment && this.player.comment.hide();
+
+        if (/mobile/i.test(window.navigator.userAgent)) {
+            this.player.template.mask.classList.add('dplayer-mask-show');
+        }
     }
 
     isShow() {
