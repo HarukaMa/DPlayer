@@ -73,15 +73,12 @@
         .dplayer-bar-wrap {
             display: none;
         }
-        .dplayer-setting-speed {
-            display: none;
-        }
         .dplayer-setting-loop {
             display: none;
         }
 
         &.dplayer-no-danmaku {
-            .dplayer-setting {
+            .dplayer-setting-showdan .dplayer-setting-danunlimit .dplayer-setting-danmaku {
                 display: none;
             }
         }
