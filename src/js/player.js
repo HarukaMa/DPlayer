@@ -268,6 +268,23 @@ class DPlayer {
     }
 
     /**
+     * Toggle volume between muted and unmuted
+     */
+    toggleMute(mute) {
+        if (mute === undefined) {
+            mute = !this.video.muted;
+        }
+        this.video.muted = mute;
+        if (mute) {
+            this.bar.set('volume', 0, 'width');
+            this.template.volumeIcon.innerHTML = Icons.volumeOff;
+        } else {
+            this.bar.set('volume', this.volume(), 'width');
+            this.switchVolumeIcon();
+        }
+    }
+
+    /**
      * Toggle between play and pause
      */
     toggle() {
