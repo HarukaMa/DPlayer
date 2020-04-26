@@ -102,9 +102,9 @@ const utils = {
     },
 
     nameMap: {
-        dragStart: isMobile ? 'touchstart' : 'mousedown',
-        dragMove: isMobile ? 'touchmove' : 'mousemove',
-        dragEnd: isMobile ? 'touchend' : 'mouseup',
+        dragStart: /mobile/i.test(window.navigator.userAgent) ? 'touchstart' : 'mousedown',
+        dragMove: /mobile/i.test(window.navigator.userAgent) ? 'touchmove' : 'mousemove',
+        dragEnd: /mobile/i.test(window.navigator.userAgent) ? 'touchend' : 'mouseup',
     },
 
     color2Number: (color) => {
