@@ -191,6 +191,9 @@ class Controller {
         };
 
         this.player.template.volumeBarWrapWrap.addEventListener('click', (event) => {
+            if (/mobile/i.test(window.navigator.userAgent)) {
+                return;
+            }
             const e = event || window.event;
             const percentage = ((e.clientX || e.changedTouches[0].clientX) - utils.getBoundingClientRectViewLeft(this.player.template.volumeBarWrap) - 5.5) / vWidth;
             this.player.volume(percentage);

@@ -4072,6 +4072,7 @@ function () {
       };
 
       this.player.template.volumeBarWrapWrap.addEventListener('click', function (event) {
+        if (/mobile/i.test(window.navigator.userAgent)) return;
         var e = event || window.event;
         var percentage = ((e.clientX || e.changedTouches[0].clientX) - _utils__WEBPACK_IMPORTED_MODULE_0__["default"].getBoundingClientRectViewLeft(_this7.player.template.volumeBarWrap) - 5.5) / vWidth;
 
@@ -5208,7 +5209,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* global DPLAYER_VERSION GIT_HASH */
 
-console.log('\n'.concat(" %c DPlayer v", "1.25.0", " ").concat("8fc660e", " %c http://dplayer.js.org ", '\n', '\n'), 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+console.log('\n'.concat(" %c DPlayer v", "1.25.0", " ").concat("3d2bda6", " %c http://dplayer.js.org ", '\n', '\n'), 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
 /* harmony default export */ __webpack_exports__["default"] = (_player__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 /***/ }),
@@ -5274,7 +5275,7 @@ function () {
   }, {
     key: "update",
     value: function update() {
-      this.template.infoVersion.innerHTML = "v".concat("1.25.0", " ").concat("8fc660e");
+      this.template.infoVersion.innerHTML = "v".concat("1.25.0", " ").concat("3d2bda6");
       this.template.infoType.innerHTML = this.player.type;
       this.template.infoUrl.innerHTML = this.player.options.video.url;
       this.template.infoResolution.innerHTML = "".concat(this.player.video.videoWidth, " x ").concat(this.player.video.videoHeight);
