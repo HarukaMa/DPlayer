@@ -266,7 +266,11 @@ class Controller {
         this.show();
         clearTimeout(this.autoHideTimer);
         this.autoHideTimer = setTimeout(() => {
-            if (this.player.video.played.length && !this.player.paused && !this.disableAutoHide) {
+            if (!this.player.video.played.length) {
+                this.setAutoHide();
+                return;
+            }
+            if (!this.player.paused && !this.disableAutoHide) {
                 this.hide();
             }
         }, 3000);
